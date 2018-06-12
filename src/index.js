@@ -10,12 +10,12 @@ botonCifrar.addEventListener("click", event => {
   let encodeValueBean = window.cipher.encode(
     offset.value,
     string.value,
-  );
+  )
 });
 
 botonDescifrar.addEventListener("click", event => {
   let decodeValueBean = window.cipher.decode(
     offset.value,
     stringD.value,
-  );
+  )
 });
