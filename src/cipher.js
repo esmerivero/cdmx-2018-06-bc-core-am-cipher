@@ -45,7 +45,6 @@ window.cipher = {
           arrayTextToDecipher.push(string.charCodeAt([i]));
           arrayTextDeciphered = ((((arrayTextToDecipher[i] + 111 ) - parseInt(offset)) % 26)  + 97);
           textDeciphered += String.fromCharCode(arrayTextDeciphered);
-          log
         }
         //en caso contrario se realiza la codificación
         else {
@@ -58,11 +57,11 @@ window.cipher = {
         // outputTextD.defaultValue = textDeciphered;
         return textDeciphered;
   },
-  createCipherWithOffset: (encode, decode) =>{
-    let caesarCipher = ({
-      encode: window.cipher.encode,
-      decode: window.cipher.decode
-    });
-    return caesarCipher;
-  },
+  // createCipherWithOffset: (encode, decode) =>{
+  //   let caesarCipher = ({
+  //     encode: window.cipher.encode,
+  //     decode: window.cipher.decode
+  //   });
+  //   return caesarCipher;
+  // },
 };
