@@ -26,9 +26,10 @@ window.cipher = {
         }
         }
       //se muestra el texto cifrado en el input correspondiente
-        outputTextC.defaultValue = textCiphered;
+        // outputTextC.defaultValue = textCiphered;
+        return textCiphered;
   },
-  decode: (offset, string) => { 
+  decode: (offset, string) => {
     let arrayTextToDecipher = [];
     let arrayTextDeciphered = [];
     let textDeciphered= "";
@@ -44,6 +45,7 @@ window.cipher = {
           arrayTextToDecipher.push(string.charCodeAt([i]));
           arrayTextDeciphered = ((((arrayTextToDecipher[i] + 111 ) - parseInt(offset)) % 26)  + 97);
           textDeciphered += String.fromCharCode(arrayTextDeciphered);
+          log
         }
         //en caso contrario se realiza la codificación
         else {
@@ -53,9 +55,14 @@ window.cipher = {
         }
         }
       //se muestra el texto cifrado en el input correspondiente
-        outputTextD.defaultValue = textDeciphered;
+        // outputTextD.defaultValue = textDeciphered;
+        return textDeciphered;
   },
-  createCipherWithOffset: () =>{
-
+  createCipherWithOffset: (encode, decode) =>{
+    let caesarCipher = ({
+      encode: window.cipher.encode,
+      decode: window.cipher.decode
+    });
+    return caesarCipher;
   },
 };

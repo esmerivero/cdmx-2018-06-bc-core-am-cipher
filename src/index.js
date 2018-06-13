@@ -9,13 +9,18 @@ let stringD = document.getElementById("newTextCiphered");
 botonCifrar.addEventListener("click", event => {
   let encodeValueBean = window.cipher.encode(
     offset.value,
-    string.value,
-  )
+    string.value
+  );
+  console.log(encodeValueBean);
+  outputTextC.defaultValue = encodeValueBean;
+
 });
 
 botonDescifrar.addEventListener("click", event => {
   let decodeValueBean = window.cipher.decode(
     offset.value,
-    stringD.value,
-  )
+    stringD.value
+  );
+  console.log(decodeValueBean);
+  outputTextD.defaultValue = decodeValueBean;
 });
