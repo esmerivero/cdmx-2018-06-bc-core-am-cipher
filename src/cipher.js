@@ -52,16 +52,14 @@ window.cipher = {
           arrayTextDeciphered = ((((arrayTextToDecipher[i] + 65 ) - parseInt(offset)) % 26)  + 65);
           textDeciphered += String.fromCharCode(arrayTextDeciphered);
         }
-        }
-      //se muestra el texto cifrado en el input correspondiente
-        // outputTextD.defaultValue = textDeciphered;
+      }
         return textDeciphered;
   },
-  // createCipherWithOffset: (encode, decode) =>{
-  //   let caesarCipher = ({
-  //     encode: window.cipher.encode,
-  //     decode: window.cipher.decode
-  //   });
-  //   return caesarCipher;
-  // },
+
+  createCipherWithOffset: (offset, string) => {
+    return cifrado ={
+      encode: (offset, string),
+      decode: (offset, string)
+    };
+  }
 };

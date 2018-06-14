@@ -6,18 +6,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="sectionCipher">
-      <div class="textCipherCaesar">
-        Número de la transposición <input type="text" id="textValueBean" placeholder= "Aquí va la semilla">
-        
-        Ingresa el texto <input type="text" id="textCipher" placeholder= "Aquí va tu texto">
-        
-        <input type="button" id="cifrar" name="buttonCipher" value="Cifrar">
-        <input type="button" id="descifrar" name="buttonDecipher" value="Descifrar">
-        
-        Mensaje cifrado <input type="text" id="newTextCiphered" value="">
-        
-        Mensaje Descifrado <input type="text" id="newTextDeciphered" value="">
+    <section class="sectionCipher" style="overflow-x:auto;">
+    <h1 align = "center">Cifrado César</h1>
+      <div class="information">
+        <h3>¿Qué es?</h3>
+        <p>Imagina que deseas enviar un mensaje para alguien especial,
+          pero existe la posibilidad que alguien más pueda leerlo, así que necesitas ocultar ese mensaje para que nadie más pueda entenderlo, solo la persona indicada.</p>
+        <p>Peroo... ¿Cómo funciona?</p>
+        <p>Digamos que quieres escribirle a tu mejor amigx: "Nos vemos a las cinco en MUNDO PLANET" y tu número de transposición o saltos serán 5</p>
+        <p>El mensaje oculto o cifrado queda: "Stx ajrtx f qfx hnsht js RZSIT UQFSJY"</p>
+        <h3>¿Y cómo lo descifro?</h3>
+        <p>Para descifralo debes poner el número de saltos que te darán y el mensaje cifrado. ¡Intentalo!</p>
+
+      </div>
+      <div class="Ejemplo">
+        <h2></h2>
+      </div>
+      <div class="messageCipher">
+        <div class="" style="display: block" align = "center">
+          Número de la transposición <input type="text" id="textValueBean" placeholder= "Aquí va la semilla">
+        </div>
+        <div class="" style="display: block" align = "center">
+          Ingresa el texto <input type="text" id="textCipher" placeholder= "Aquí va tu texto">
+        </div>
+        <div class="" align = "center">
+          <input type="button" id="cifrar" name="buttonCipher" value="Cifrar" style="display: inline-block">
+          <input type="button" id="descifrar" name="buttonDecipher" value="Descifrar" style="display: inline-block">
+        </div>
+        <div class="">
+          Mensaje Cifrado <input type="text" id="newTextCiphered" value="" style="display: inline-block">
+          Mensaje Descifrado <input type="text" id="newTextDeciphered" value="" style="display: inline-block">
+        </div>
       </div>
     </section>
     <div id="root"></div>
