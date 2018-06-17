@@ -3,43 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua|Nunito|Sofadi+One" rel="stylesheet">
   </head>
   <body>
-    <section class="sectionCipher" style="overflow-x:auto;">
-    <h1 align = "center">Cifrado César</h1>
-      <div class="information">
-        <h3>¿Qué es?</h3>
-        <p>Imagina que deseas enviar un mensaje para alguien especial,
-          pero existe la posibilidad que alguien más pueda leerlo, así que necesitas ocultar ese mensaje para que nadie más pueda entenderlo, solo la persona indicada.</p>
-        <p>Peroo... ¿Cómo funciona?</p>
-        <p>Digamos que quieres escribirle a tu mejor amigx: "Nos vemos a las cinco en MUNDO PLANET" y tu número de transposición o saltos serán 5</p>
-        <p>El mensaje oculto o cifrado queda: "Stx ajrtx f qfx hnsht js RZSIT UQFSJY"</p>
-        <h3>¿Y cómo lo descifro?</h3>
-        <p>Para descifralo debes poner el número de saltos que te darán y el mensaje cifrado. ¡Intentalo!</p>
+    <header>
+      <div class="container">
+        <h1 id="titulo">Cifrado César</h1>
+      </div>
+    </header>
 
+    <div class="container">
+      <section class="main row">
+        <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p>¿Qué es?</p>
+          <p>Supongamos que deseas hacer una fiesta sorpresa para tu amig@, pero necesitas organizar todo por Whatsapp. Cabe la posibilidad de que el cumpleañero se enteré y se arruine la sorpresa, entonces encuentras una manera de evitar esto.</p>
+          <p>El cifrado César sirve para desplazar las letras del abecedario, la cantidad de veces que queramos, por ejemplo ABC...XYZ tendrán un desplazamiento de 1. Entonces sus nuevas posiciones serán BCD...YZA, dando un mensaje inlegible</p>
+          <p>Ahora tus demás amigos, deberán copiar el texto cifrado y el número de desplazamiento que tú les darás para que vuelvan a obtener el mensaje claro, a esto se le conoce como descifrado.</p>
+        </article>
+        <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+          <p>¿Cómo funciona?</p>
+          <p>Para cifrar, escribe en el recuadro de "Número de transposición" el número de desplazamiento que tendrán las letras.</p>
+          <p>Ahora escribe el texto que deseas cifrar en el recuadro "Texto a cifrar" y pulsa el botón "Cifrar".</p>
+          <p>Para descifrar, también requieres el número de desplazamiento.</p>
+          <p>Ahora escribe el texto a decifrar en el recuadro "Mensaje cifrado" y pulsa el botón "Descifrar".</p>
+          <p>Nota: Puedes escribir solo en mayúsculas, minúsculas e incluir espacios, recuerda que los números, acentos, comas y carácteres especiales, no se podrán cifrar/descifrar y el mensaje de regreso puede ser descifrado incorrectamente.</p>
+        </aside>
+      </section>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p>Número de transposición</p><p><input type="text" id="textValueBean" placeholder = "Ingresa la transposición"></p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p>Ingresa el texto</p><p> <input type="text" id="textCipher" placeholder= "Texto a cifrar"></p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p><input type="button" class="btn btn-primary" id="cifrar" name="buttonCipher" value="Cifrar" style="display: inline-block"></p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p><input type="button" class="btn btn-primary" id="descifrar" name="buttonDecipher" value="Descifrar" style="display: inline-block"></p>
+        </div>
       </div>
-      <div class="Ejemplo">
-        <h2></h2>
-      </div>
-      <div class="messageCipher">
-        <div class="" style="display: block" align = "center">
-          Número de la transposición <input type="text" id="textValueBean" placeholder= "Aquí va la semilla">
+
+      <div class="row2">
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p>Mensaje Cifrado</p><p> <input type="text" id="newTextCiphered" value="">
         </div>
-        <div class="" style="display: block" align = "center">
-          Ingresa el texto <input type="text" id="textCipher" placeholder= "Aquí va tu texto">
-        </div>
-        <div class="" align = "center">
-          <input type="button" id="cifrar" name="buttonCipher" value="Cifrar" style="display: inline-block">
-          <input type="button" id="descifrar" name="buttonDecipher" value="Descifrar" style="display: inline-block">
-        </div>
-        <div class="">
-          Mensaje Cifrado <input type="text" id="newTextCiphered" value="" style="display: inline-block">
-          Mensaje Descifrado <input type="text" id="newTextDeciphered" value="" style="display: inline-block">
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <p>Mensaje Descifrado</p><p><input type="text" id="newTextDeciphered" value="">
         </div>
       </div>
-    </section>
+    </div>
+      <!-- Número<div class="row">
+
+      </div> de la transposición <input type="text" id="textValueBean" placeholder = "Ingresa la transposición">
+      Ingresa el texto <input type="text" id="textCipher" placeholder= "Aquí va tu texto">
+    <input type="button" class="btn btn-primary" id="cifrar" name="buttonCipher" value="Cifrar" style="display: inline-block">
+    <input type="button" class="btn btn-primary" id="descifrar" name="buttonDecipher" value="Descifrar" style="display: inline-block">
+    Mensaje Cifrado <input type="text" id="newTextCiphered" value="" style="display: inline-block">
+    Mensaje Descifrado <input type="text" id="newTextDeciphered" value="" style="display: inline-block"> -->
+
     <div id="root"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
