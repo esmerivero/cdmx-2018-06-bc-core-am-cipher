@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <!-- se hace responsive -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
@@ -14,9 +15,10 @@
         <h1 id="titulo">Cifrado César</h1>
       </div>
     </header>
-
+    <!-- se crea el contenedor principal dónde se explica cómo funciona el cifrado -->
     <div class="container">
       <section class="main row">
+        <!-- se hace uso del grid -->
         <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
           <p>¿Qué es?</p>
           <p>Supongamos que deseas hacer una fiesta sorpresa para tu amig@, pero necesitas organizar todo por Whatsapp. Cabe la posibilidad de que el cumpleañero se enteré y se arruine la sorpresa, entonces encuentras una manera de evitar esto.</p>
@@ -32,17 +34,17 @@
           <p>Ahora escribe el texto a decifrar en el recuadro "Mensaje cifrado" y pulsa el botón "Descifrar".</p>
         </aside>
       </section>
-
-      <div class="row">
+      
+      <div class="row" id="mensajes">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <p>Número de transposición</p><p><input type="text" id="textValueBean" placeholder = "Ingresa la transposición"></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <p>Ingresa el texto</p><p> <input type="text" id="textCipher" placeholder= "Texto a cifrar"></p>
+          <p>Ingresa el texto a cifrar</p><p> <input type="text" id="textCipher" placeholder= "Texto a cifrar"></p>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="mensajes">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <p>Mensaje Cifrado</p><p> <input type="text" id="newTextCiphered" value="">
         </div>
@@ -60,14 +62,6 @@
         </div>
       </div>
     </div>
-      <!-- Número<div class="row">
-
-      </div> de la transposición <input type="text" id="textValueBean" placeholder = "Ingresa la transposición">
-      Ingresa el texto <input type="text" id="textCipher" placeholder= "Aquí va tu texto">
-    <input type="button" class="btn btn-primary" id="cifrar" name="buttonCipher" value="Cifrar" style="display: inline-block">
-    <input type="button" class="btn btn-primary" id="descifrar" name="buttonDecipher" value="Descifrar" style="display: inline-block">
-    Mensaje Cifrado <input type="text" id="newTextCiphered" value="" style="display: inline-block">
-    Mensaje Descifrado <input type="text" id="newTextDeciphered" value="" style="display: inline-block"> -->
 
     <div id="root"></div>
     <script src="js/jquery.js"></script>

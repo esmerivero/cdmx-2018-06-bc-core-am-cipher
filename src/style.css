@@ -5,8 +5,9 @@ header{
  .main{
    background: #64d8cb;
  }
-
-
+ #mensajes{
+   background: #e5ffff;
+ }
 
 #titulo{
   font-family: 'Nunito', sans-serif;
